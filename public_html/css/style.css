@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-Mar-2017, 15:47:23
+    Author     : kacsinecz
+*/
+
+div div { /* tento style plati pre child div-y, ktorych obsahuje rodicovsky div, preto je tu "div div" */
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position : absolute;
+    -webkit-transition: width 1s, height 1s, left 1s, top 1s;
+    transition: width 1s, height 1s, left 1s, top 1s;
+    
+    
+    /* programovo: vypocitat dynamicku vysku DIV, t.j. dynamicka_vyska:(164 + vyska_tabulky)/2
+    a potom padding: padding = 164 - dynamicka_vyska 
+    takto bude zabezpecene, aby vysledna vyska bola vzdy 164px*/
+}
+
+table {
+    margin:auto;
+    font-family: "Arial";
+    font-size: 12px;
+}
+
+.main_div { /* class, ktory sa nastavuje na hlavny div, do ktoreho chceme pridat child div-y */
+    margin: auto; /* takto urobime center horizontal align */
+    position: relative; /* child div-y musia mat position:absolute, aby mohli byt umiestnene vyhladom na rodicovsky div, ale to funguje len vtedy,
+                           ked rodicovsky div ma iny position, ako static (co je default), preto tu nastavime relative*/
+}
+
+iframe {
+    border: none;
+    top: 2px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+

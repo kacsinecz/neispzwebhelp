@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            div {
+                position: relative;
+                border: red 2px solid;
+                width: 500px;
+                height: 500px;
+            }
+            iframe {
+                height: 100%;
+                width: 100%;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <script>
+            function iframeclick() {
+                document.getElementById("theiframe").contentWindow.document.body.onclick = function() {
+                    var i = this.id;
+                    console.log("iframe clicked!");
+                    //document.getElementById("theiframe").contentWindow.location.reload();
+                };
+            }
+
+        </script>
+        <div>
+            <iframe id="theiframe" src ="subhtml/navigacia_tutorial.htm" ></iframe>
+            
+        </div>
+    </body>
+</html>
