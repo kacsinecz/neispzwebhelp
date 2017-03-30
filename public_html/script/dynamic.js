@@ -14,6 +14,55 @@ var chapters = [
     { name:"Formulár prevádzkovateľa:",
       help_page:"subhtml/prevadzkovatel_tutorial.htm",  
       parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Formulár zdroja:",
+      help_page:"subhtml/zdroj_tutorial.htm",  
+      parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Formulár miest vypúšťaní:",
+      help_page:"subhtml/mv_tutorial.htm",  
+      parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Formulár palív:",
+      help_page:"subhtml/paliva_tutorial.htm",  
+      parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Formulár odlučovačov:",
+      help_page:"subhtml/odluc_tutorial.htm",  
+      parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Formulár spaľovacích jednotiek:",
+      help_page:"subhtml/SJ_tutorial.htm",  
+      parts:[{text:"- popis formulára",bold:false}]
+    },
+    { name:"Výpočty k spaľovacím jednotkám:",
+      help_page:"subhtml/SJ_vypocty_tutorial.htm",  
+      parts:[{text:"- popis výpočtov",bold:false},{text:"- vzorce výpočtových vzťahov",bold:false}]
+    },
+    { name:"Formulár technológií:",
+      help_page:"subhtml/technologie_tutorial.htm",  
+      parts:[{text:"- zadávanie novej technológie",bold:false},{text:"- zmena a mazanie technológií",bold:false},
+      {text:"- práca s číselníkmi",bold:false},{text:"- zápis údajov",bold:false}]
+    },
+    { name:"Výpočty k technológiam:",
+      help_page:"subhtml/tech_emisie_tutorial.htm",  
+      parts:[{text:"- zadávanie nového výpočtu",bold:false},{text:"- zadávanie čiastkových emisií",bold:false},
+      {text:"- asistent zadávania emisií",bold:false},{text:"- mazanie a zmena údajov",bold:false},{text:"- zápis údajov",bold:false}]
+    },
+    { name:"Menu nový zdroj",
+      help_page:"subhtml/NZ_tutorial.htm",  
+      parts:[{text:"- popis procesu zadávania",bold:false},{text:"Menu zariadenia",bold:true},
+      {text:"- popis zariadení",bold:false},{text:"Menu kvalita údajov",bold:true},{text:"- popis zobrazenia kvality údajov",bold:false}]
+    },
+    { name:"Menu archív",
+      help_page:"subhtml/archiv_tutorial.htm",  
+      parts:[{text:"- popis archívu",bold:false},{text:"Menu časové rady",bold:true},
+      {text:"- popis formulára",bold:false}]
+    },
+    { name:"Menu nastavenia",
+      help_page:"subhtml/nastavenia_tutorial.htm",  
+      parts:[{text:"- popis nastavení",bold:false},{text:"Menu časové rady",bold:true},
+      {text:"Menu pomoc",bold:true}]
     }
 ];
 
