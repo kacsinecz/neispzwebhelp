@@ -114,6 +114,7 @@ function initialState() {
         count_div++;
         div.id = "div" + count_div; 
         div.style.width = div_width + "px";
+        div.title = element.name.replace(":","");
 
         div.appendChild(table);
 
