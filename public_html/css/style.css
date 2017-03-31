@@ -17,6 +17,7 @@ div div { /* tento style plati pre child div-y, ktorych obsahuje rodicovsky div,
     position : absolute;
     -webkit-transition: width 1s, height 1s, left 1s, top 1s;
     transition: width 1s, height 1s, left 1s, top 1s;
+    cursor: pointer;
     
     
     /* programovo: vypocitat dynamicku vysku DIV, t.j. dynamicka_vyska:(164 + vyska_tabulky)/2
@@ -34,6 +35,20 @@ table {
     margin: auto; /* takto urobime center horizontal align */
     position: relative; /* child div-y musia mat position:absolute, aby mohli byt umiestnene vyhladom na rodicovsky div, ale to funguje len vtedy,
                            ked rodicovsky div ma iny position, ako static (co je default), preto tu nastavime relative*/
+}
+
+.header_font { 
+    font-family: "Arial";
+    font-size: 16px; 
+}
+
+div p { 
+    text-align: center;  
+    margin: 3px;
+}
+
+img {
+    cursor: pointer;
 }
 
 iframe {
