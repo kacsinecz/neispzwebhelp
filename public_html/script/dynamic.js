@@ -1,78 +1,95 @@
 var chapters = [
     { name:"Úvod k príručke:",
       help_page:"subhtml/uvod_tutorial.htm",  
-      parts:[{text:"- Úvod",bold:false},{text:"- Užívatelia",bold:false},{text:"- Prihlásenie sa do systému",bold:false},{text:"- Stav inventúry",bold:false}]  
+      parts:[{text:"- Úvod",bold:false},{text:"- Užívatelia",bold:false},{text:"- Prihlásenie sa do systému",bold:false},{text:"- Stav inventúry",bold:false}],
+      minimized_name:"Úvod k príručke"  
     },
     { name:"Hlavné menu:",
       help_page:"subhtml/hlavne_menu_tutorial.htm",
-      parts:[{text:"- Popis hlavného menu",bold:false},{text:"- Popis hlavičky (celkové emisie prevádzkovateľa)",bold:false}]
+      parts:[{text:"- Popis hlavného menu",bold:false},{text:"- Popis hlavičky (celkové emisie prevádzkovateľa)",bold:false}],
+      minimized_name:"Hlavné menu"
     },
     { name:"Navigácia a ikony tlačidiel:",
       help_page:"subhtml/navigacia_tutorial.htm",
-      parts:[{text:"- Navigácia v stromovej štruktúre zdrojov",bold:false},{text:"- Ikony tlačidiel na formulároch",bold:false}]
+      parts:[{text:"- Navigácia v stromovej štruktúre zdrojov",bold:false},{text:"- Ikony tlačidiel na formulároch",bold:false}],
+      minimized_name:"Navigácia a ikony tlačidiel"
     },
     { name:"Formulár prevádzkovateľa:",
       help_page:"subhtml/prevadzkovatel_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár prevádzkovateľa"
     },
     { name:"Formulár zdroja:",
       help_page:"subhtml/zdroj_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár zdroja"
     },
     { name:"Formulár miest vypúšťaní:",
       help_page:"subhtml/mv_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár miest vypúšťaní"
     },
     { name:"Formulár palív:",
       help_page:"subhtml/paliva_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár palív"
     },
     { name:"Formulár odlučovačov:",
       help_page:"subhtml/odluc_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár odlučovačov"
     },
     { name:"Formulár spaľovacích jednotiek:",
       help_page:"subhtml/SJ_tutorial.htm",  
-      parts:[{text:"- popis formulára",bold:false}]
+      parts:[{text:"- popis formulára",bold:false}],
+      minimized_name:"Formulár spaľ.jednotiek"
     },
     { name:"Výpočty k spaľovacím jednotkám:",
       help_page:"subhtml/SJ_vypocty_tutorial.htm",  
-      parts:[{text:"- popis výpočtov",bold:false},{text:"- vzorce výpočtových vzťahov",bold:false}]
+      parts:[{text:"- popis výpočtov",bold:false},{text:"- vzorce výpočtových vzťahov",bold:false}],
+      minimized_name:"Výpočty k spaľ.jednotkám"
     },
     { name:"Formulár technológií:",
       help_page:"subhtml/technologie_tutorial.htm",  
       parts:[{text:"- zadávanie novej technológie",bold:false},{text:"- zmena a mazanie technológií",bold:false},
-      {text:"- práca s číselníkmi",bold:false},{text:"- zápis údajov",bold:false}]
+      {text:"- práca s číselníkmi",bold:false},{text:"- zápis údajov",bold:false}],
+      minimized_name:"Formulár technológií"
     },
     { name:"Výpočty k technológiam:",
       help_page:"subhtml/tech_emisie_tutorial.htm",  
       parts:[{text:"- zadávanie nového výpočtu",bold:false},{text:"- zadávanie čiastkových emisií",bold:false},
-      {text:"- asistent zadávania emisií",bold:false},{text:"- mazanie a zmena údajov",bold:false},{text:"- zápis údajov",bold:false}]
+      {text:"- asistent zadávania emisií",bold:false},{text:"- mazanie a zmena údajov",bold:false},{text:"- zápis údajov",bold:false}],
+      minimized_name:"Výpočty k technológiam"
     },
     { name:"Menu nový zdroj",
       help_page:"subhtml/NZ_tutorial.htm",  
       parts:[{text:"- popis procesu zadávania",bold:false},{text:"Menu zariadenia",bold:true},
-      {text:"- popis zariadení",bold:false},{text:"Menu kvalita údajov",bold:true},{text:"- popis zobrazenia kvality údajov",bold:false}]
+      {text:"- popis zariadení",bold:false},{text:"Menu kvalita údajov",bold:true},{text:"- popis zobrazenia kvality údajov",bold:false}],
+      minimized_name:"Zadávanie nového zdroja"
     },
     { name:"Menu archív",
       help_page:"subhtml/archiv_tutorial.htm",  
       parts:[{text:"- popis archívu",bold:false},{text:"Menu časové rady",bold:true},
-      {text:"- popis formulára",bold:false}]
+      {text:"- popis formulára",bold:false}],
+      minimized_name:"Menu archív"
     },
     { name:"Menu nastavenia",
       help_page:"subhtml/nastavenia_tutorial.htm",  
       parts:[{text:"- popis nastavení",bold:false},{text:"Menu časové rady",bold:true},
-      {text:"Menu pomoc",bold:true}]
+      {text:"Menu pomoc",bold:true}],
+      minimized_name:"Menu nastavenia"
     }
 ];
 
 var div_height = 164;
+var div_minimized_height = 50;
 var div_width = 332;
 var div_margin = 5;
 var max_column = 3;
 var count_div = 0;
 var div_heights = [];
 var div_tables = [];
+var div_minimized_tables = [];
 var help_pages = [];
 
 initialState();
@@ -147,12 +164,22 @@ function initialState() {
 
         div.style.height = h + "px";
         div.style.paddingTop =  (div_height - h) + "px";
+        
+        var table_minimized = document.createElement("table");
+        var tr_minimized = document.createElement("tr");
+        table_minimized.appendChild(tr_minimized);
+        var th_minimized = document.createElement("th");
+        var textnode_minimized = document.createTextNode(element.minimized_name);
+        th_minimized.appendChild(textnode_minimized);
+        tr_minimized.appendChild(th_minimized);
+        div_minimized_tables[div.id] = table_minimized;
 
     });
 }
 
 function divClicked(event) {
     var r = 0;
+    var padding;
     var array = document.getElementById("main-div").getElementsByTagName("div");
     for(var i=0;i<array.length;i++) {
         if(array[i].id === this.id) {
@@ -170,15 +197,24 @@ function divClicked(event) {
         }
         else {
             array[i].style.left = ((max_column - 1) * div_width + (max_column + 1)*(div_margin + 1)) + "px";
-            array[i].style.top = (r * div_height + (r + 1)*(div_margin + 1)) + "px";
+            array[i].style.top = (r * div_minimized_height + (r + 1)*(div_margin + 1)) + "px";
             array[i].style.width = div_width + "px";
-            array[i].style.height = div_heights[array[i].id] + "px";
-            array[i].style.paddingTop =  (div_height - div_heights[array[i].id]) + "px";
-
+                                    
             var ifr = array[i].getElementsByTagName("iframe");
             if(ifr.length !== 0)   {
-                array[i].replaceChild(div_tables[array[i].id],ifr[0]);
+                array[i].replaceChild(div_minimized_tables[array[i].id],ifr[0]);
             }
+            
+            var table_div = array[i].getElementsByTagName("table");
+            if(table_div.length !== 0)   {
+                array[i].replaceChild(div_minimized_tables[array[i].id],table_div[0]);
+            }
+            
+            var tt1 = table_div[0].getBoundingClientRect();
+            padding = (div_minimized_height - (tt1.bottom - tt1.top))/2;
+            array[i].style.height = (tt1.bottom - tt1.top + padding) + "px";
+            array[i].style.paddingTop = padding + "px";
+                
             r++;
         }
     }
@@ -206,6 +242,11 @@ function defaultState() {
         var ifr = array[i].getElementsByTagName("iframe");
         if(ifr.length !== 0)   {
             array[i].replaceChild(div_tables[array[i].id],ifr[0]);
+        }
+        
+        var table = array[i].getElementsByTagName("table");
+        if(table.length !== 0)   {
+            array[i].replaceChild(div_tables[array[i].id],table[0]);
         }
     }
 }
